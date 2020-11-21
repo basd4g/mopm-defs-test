@@ -1,0 +1,24 @@
+name: b
+url: https://github.com/basd4g/mopm-defs-test
+description: install dependencies test
+environments:
+  - architecture: amd64
+    platform: darwin
+    dependencies:
+      - e
+      - f
+    verification: "find /tmp/mopm-defs-test/b-is-installed"
+    privilege: false
+    script: |
+      mkdir -p /tmp/mopm-defs-test
+      touch /tmp/mopm-defs-test/b-is-installed
+  - architecture: amd64
+    platform: linux/ubuntu
+    dependencies:
+      - e
+      - f
+    verification: "find /tmp/mopm-defs-test/b-is-installed"
+    privilege: false
+    script: |
+      mkdir -p /tmp/mopm-defs-test
+      touch /tmp/mopm-defs-test/b-is-installed

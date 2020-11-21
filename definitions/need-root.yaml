@@ -1,0 +1,20 @@
+name: need-root
+url: https://github.com/basd4g/mopm-defs-test
+description: need root installer
+environments:
+  - architecture: amd64
+    platform: darwin
+    dependencies:
+    verification: "find /tmp/mopm-defs-test/need-root-is-installed"
+    privilege: true
+    script: |
+      mkdir -p /tmp/mopm-defs-test
+      touch /tmp/mopm-defs-test/need-root-is-installed
+  - architecture: amd64
+    platform: linux/ubuntu
+    dependencies:
+    verification: "find /tmp/mopm-defs-test/need-root-is-installed"
+    privilege: true
+    script: |
+      mkdir -p /tmp/mopm-defs-test
+      touch /tmp/mopm-defs-test/need-root-is-installed
