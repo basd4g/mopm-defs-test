@@ -13,6 +13,8 @@ environments:
     script: |
       mkdir -p /tmp/mopm-defs-test
       touch /tmp/mopm-defs-test/a-is-installed
+      echo "install pkg a is finished (stdout message test)"
+      echo "install pkg a is finished (stderr message test)" 1>&2
   - architecture: amd64
     platform: linux/ubuntu
     dependencies:
@@ -24,3 +26,5 @@ environments:
     script: |
       mkdir -p /tmp/mopm-defs-test
       touch /tmp/mopm-defs-test/a-is-installed
+      echo "install pkg a is finished (stdout message test)"
+      echo "install pkg a is finished (stderr message test)" 1>&2
